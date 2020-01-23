@@ -125,6 +125,6 @@ func main() {
 	ns = Duration(ms)
 
 	fmt.Println(ns)
-	 
+	
 
 }
