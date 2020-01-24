@@ -32,27 +32,37 @@ import (
 
 func main() {
 	const (
-		password = "6475"
-
 		usage = "Usage: [username] [password]"
 		errUser = "Access denied for %q."
 		errPass = "Invalid password for %q."
 		accessOK = "Access granted to %q."
 	)
 	var (
-		args = os.Args
-		l = len(args)
+		// args = os.Args
+		// l = len(args)
 
 		usernames = [2]string{"jack", "gene"}
 		passwords = [2]string{"6475", "1234"}
 	)
 
-	if l != 3 {
-		fmt.Println(usage)
-		return
-	}
+	// if l != 3 {
+	// 	fmt.Println(usage)
+	// 	return
+	// }
 
-	if args[1] == usernames[0] || args[1] == usernames[1] {
+	// if args[1] == usernames[0] || args[1] == usernames[1] {
+	// 	if (args[1] == usernames[0] && args[2] == passwords[0]) || (args[1] == usernames[1] && args[2] == passwords[1]) {
+	// 		fmt.Printf(accessOK, args[1])
+	// 	} else {
+	// 		fmt.Printf(errPass, args[1])
+	// 	}
+	// } else {
+	// 	fmt.Printf(errUser, args[1])
+	// }
+
+	if args := os.Args; len(args) != 3 {
+		fmt.Println(usage)
+	} else if args[1] == usernames[0] || args[1] == usernames[1] {
 		if (args[1] == usernames[0] && args[2] == passwords[0]) || (args[1] == usernames[1] && args[2] == passwords[1]) {
 			fmt.Printf(accessOK, args[1])
 		} else {
