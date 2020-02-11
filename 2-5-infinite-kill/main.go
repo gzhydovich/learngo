@@ -55,6 +55,7 @@ func main() {
 	var symbols = [4]string{"\\", "-", "/", "|"}
 	for {
 		x := rand.Intn(4)
+		// fmt.Print(symbols[x])
 		fmt.Printf("\r%s Please Wait. Processing....", symbols[x])
 		time.Sleep(250 * time.Millisecond)
 	}
