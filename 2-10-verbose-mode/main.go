@@ -47,6 +47,11 @@ func main() {
 
 	args := os.Args[1:]
 
+	if len(args) < 1 || len(args) > 2 {
+		fmt.Println(usage)
+		return
+	}
+
 	if args[0] == "-v" {
 		verbose = true
 	}
@@ -62,9 +67,6 @@ func main() {
 		fmt.Print(usage)
 		return
 	} 
-
-
-
 
 	for turn := 1; turn <= maxTurns; turn++ {
 		n := rand.Intn(maxTurns+1)
