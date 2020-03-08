@@ -84,11 +84,11 @@ var	nine = placeholder{
 
 	// Dots ...
 var	dots = placeholder{
-	" ",
-	"█",
-	" ",
-	"█",
-	" ",
+	"   ",
+	" █ ",
+	"   ",
+	" █ ",
+	"   ",
 }
 
 var	aa = placeholder{
@@ -139,7 +139,15 @@ var	dot = placeholder{
 	"█",
 }
 
-var alarm = [10]placeholder{
+var	none = placeholder{
+	"",
+	"",
+	"",
+	"",
+	"",
+}
+
+var alarm = [8]placeholder{
 	aa, ll, aa, rr, mm, ex,
 }
 
